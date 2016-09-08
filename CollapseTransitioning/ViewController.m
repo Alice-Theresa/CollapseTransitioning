@@ -33,6 +33,7 @@
     
     CollapseAnimator *animator = [[CollapseAnimator alloc] init];
     //animator.duration = 1;
+    //animator.sideLength = 8;
     return animator;
 }
 

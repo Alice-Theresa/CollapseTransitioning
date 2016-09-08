@@ -13,11 +13,14 @@
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext {
     
     //默认转场时间为2s
-    _duration = _duration ? _duration : 2;
+    _duration = _duration ? : 2;
     return _duration;
 }
 
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
+    
+    //默认边长为10
+    _sideLength = _sideLength ? : 10;
     
     //获取View
     UIView *containerView = [transitionContext containerView];
@@ -31,10 +34,10 @@
     NSMutableArray *xSampleArray = [[NSMutableArray alloc] init];
     NSMutableArray *ySampleArray = [[NSMutableArray alloc] init];
     
-    for (NSInteger i = 0; i < fromView.bounds.size.width; i = i + 10) {
+    for (NSInteger i = 0; i < fromView.bounds.size.width; i = i + _sideLength) {
         [xSampleArray addObject:@(i)];
     }
-    for (NSInteger i = 0; i < fromView.bounds.size.height; i = i + 10) {
+    for (NSInteger i = 0; i < fromView.bounds.size.height; i = i + _sideLength) {
         [ySampleArray addObject:@(i)];
     }
     
@@ -43,7 +46,7 @@
     
     for (NSNumber *x in xSampleArray) {
         for (NSNumber *y in ySampleArray) {
-            CGRect snapshotRegion = CGRectMake([x doubleValue], [y doubleValue], 10, 10);
+            CGRect snapshotRegion = CGRectMake([x doubleValue], [y doubleValue], _sideLength, _sideLength);
             UIView *snapshot      = [fromViewSnapshot resizableSnapshotViewFromRect:snapshotRegion afterScreenUpdates:NO withCapInsets:UIEdgeInsetsZero];
             snapshot.frame        = snapshotRegion;
             [containerView addSubview:snapshot];
@@ -54,6 +57,7 @@
     //打印切割后的总数
     //NSLog(@"%ld", snapshots.count);
     
+    //布置View
     [containerView addSubview:toView];
     [containerView sendSubviewToBack:toView];
     [containerView sendSubviewToBack:fromView];
@@ -64,7 +68,7 @@
                         options:UIViewAnimationOptionCurveLinear
                      animations:^{
                          for (UIView *view in snapshots) {
-                             view.frame = CGRectOffset(view.frame, [self randomFloatWith:200 offset:-100], [self randomFloatWith:200 offset:fromView.frame.size.height]);
+                             view.frame = CGRectOffset(view.frame, [self randomRange:200 offset:-100], [self randomRange:200 offset:fromView.frame.size.height]);
                          }
                      }
                      completion:^(BOOL finished) {
@@ -75,7 +79,7 @@
                      }];
 }
 
-- (CGFloat)randomFloatWith:(NSInteger)range offset:(NSInteger)offset {
+- (CGFloat)randomRange:(NSInteger)range offset:(NSInteger)offset {
     
     return (CGFloat)(arc4random()%range + offset);
 }

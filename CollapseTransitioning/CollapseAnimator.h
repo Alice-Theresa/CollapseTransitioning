@@ -12,8 +12,13 @@
 @interface CollapseAnimator : NSObject <UIViewControllerAnimatedTransitioning>
 
 /**
- *  转场时间
+ *  转场持续时间
  */
 @property (nonatomic, assign) NSTimeInterval duration;
+
+/**
+ *  碎片边长
+ */
+@property (nonatomic, assign) NSInteger sideLength;
 
 @end
