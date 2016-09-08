@@ -14,7 +14,7 @@ secView.transitioningDelegate = self;
 [self presentViewController:secView animated:YES completion:nil];
 ```
 
-3.实现animationControllerForDismissedController，返回一个animator对象，可自定义过场时间和碎片大小
+3.实现animationControllerForDismissedController方法，返回一个animator对象，可自定义过场时间和碎片大小
 ```
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
 
