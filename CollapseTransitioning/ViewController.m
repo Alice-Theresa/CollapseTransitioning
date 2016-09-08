@@ -19,10 +19,10 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    [_go addTarget:self action:@selector(transfer) forControlEvents:UIControlEventTouchDown];
+    [_go addTarget:self action:@selector(transition) forControlEvents:UIControlEventTouchDown];
 }
 
-- (void)transfer {
+- (void)transition {
     
     SecondViewController *secView = [[SecondViewController alloc] init];
     secView.transitioningDelegate = self;

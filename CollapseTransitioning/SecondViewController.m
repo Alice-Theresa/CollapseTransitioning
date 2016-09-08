@@ -13,6 +13,7 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    
     UIImageView *image = [[UIImageView alloc] initWithFrame:[UIScreen mainScreen].bounds];
     image.image        = [UIImage imageNamed:@"Image"];
     [self.view addSubview:image];

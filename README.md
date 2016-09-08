@@ -2,13 +2,25 @@
 
 ![Demo.gif](./Demo.gif)
 
-为要Present的ViewController接受UIViewControllerTransitioningDelegate
-
-Present时将自己设为代理
-
-并实现此方法
+1.接受协议
 ```
-- animationControllerForDismissedController:
+@interface ViewController : UIViewController <UIViewControllerTransitioningDelegate>
 ```
-在其中返回CollapseAnimator对象即可
-亦可设置时间间隔
+
+2.设置transitioningDelegate
+```
+SecondViewController *secView = [[SecondViewController alloc] init];
+secView.transitioningDelegate = self;
+[self presentViewController:secView animated:YES completion:nil];
+```
+
+3.实现animationControllerForDismissedController，返回一个animator对象，可自定义过场时间和碎片大小
+```
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
+
+    CollapseAnimator *animator = [[CollapseAnimator alloc] init];
+    //animator.duration = 1;
+    //animator.sideLength = 8;
+    return animator;
+}
+```

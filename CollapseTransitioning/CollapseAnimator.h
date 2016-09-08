@@ -17,7 +17,7 @@
 @property (nonatomic, assign) NSTimeInterval duration;
 
 /**
- *  碎片边长
+ *  碎片大小
  */
 @property (nonatomic, assign) NSInteger sideLength;
 
