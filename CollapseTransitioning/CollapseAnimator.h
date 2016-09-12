@@ -14,11 +14,11 @@
 /**
  *  转场持续时间
  */
-@property (nonatomic, assign) NSTimeInterval duration;
+@property (nonatomic, readwrite, assign) NSTimeInterval duration;
 
 /**
  *  碎片大小
  */
-@property (nonatomic, assign) NSInteger sideLength;
+@property (nonatomic, readwrite, assign) NSInteger sideLength;
 
 @end

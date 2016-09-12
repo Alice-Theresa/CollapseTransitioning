@@ -14,9 +14,9 @@
     
     [super viewDidLoad];
     
-    UIImageView *image = [[UIImageView alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    image.image        = [UIImage imageNamed:@"Image"];
-    [self.view addSubview:image];
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    imageView.image        = [UIImage imageNamed:@"Image"];
+    [self.view addSubview:imageView];
     
     UITapGestureRecognizer *tapToClose = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(close)];
     [self.view addGestureRecognizer:tapToClose];
