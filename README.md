@@ -1,6 +1,7 @@
 # CollapseTransitioning
 
 预览
+
 ![Demo.gif](./Demo.gif)
 
 1.接受协议
