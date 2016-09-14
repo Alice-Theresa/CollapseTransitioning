@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		766B329F1D80045A00245F2E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 766B329E1D80045A00245F2E /* main.m */; };
 		766B32A21D80045A00245F2E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 766B32A11D80045A00245F2E /* AppDelegate.m */; };
-		766B32A51D80045A00245F2E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 766B32A41D80045A00245F2E /* ViewController.m */; };
+		766B32A51D80045A00245F2E /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 766B32A41D80045A00245F2E /* FirstViewController.m */; };
 		766B32A81D80045A00245F2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 766B32A61D80045A00245F2E /* Main.storyboard */; };
 		766B32AA1D80045A00245F2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 766B32A91D80045A00245F2E /* Assets.xcassets */; };
 		766B32AD1D80045A00245F2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 766B32AB1D80045A00245F2E /* LaunchScreen.storyboard */; };
-		766B32B61D8004AC00245F2E /* CollapseAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 766B32B51D8004AC00245F2E /* CollapseAnimator.m */; };
+		766B32B61D8004AC00245F2E /* SACCollapseAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 766B32B51D8004AC00245F2E /* SACCollapseAnimator.m */; };
 		766B32B91D8005E200245F2E /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 766B32B81D8005E200245F2E /* SecondViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -22,14 +22,14 @@
 		766B329E1D80045A00245F2E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		766B32A01D80045A00245F2E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		766B32A11D80045A00245F2E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		766B32A31D80045A00245F2E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		766B32A41D80045A00245F2E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		766B32A31D80045A00245F2E /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		766B32A41D80045A00245F2E /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		766B32A71D80045A00245F2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		766B32A91D80045A00245F2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		766B32AC1D80045A00245F2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		766B32AE1D80045A00245F2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		766B32B41D8004AC00245F2E /* CollapseAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollapseAnimator.h; sourceTree = "<group>"; };
-		766B32B51D8004AC00245F2E /* CollapseAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollapseAnimator.m; sourceTree = "<group>"; };
+		766B32B41D8004AC00245F2E /* SACCollapseAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SACCollapseAnimator.h; sourceTree = "<group>"; };
+		766B32B51D8004AC00245F2E /* SACCollapseAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SACCollapseAnimator.m; sourceTree = "<group>"; };
 		766B32B71D8005E200245F2E /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		766B32B81D8005E200245F2E /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,12 +66,12 @@
 			children = (
 				766B32A01D80045A00245F2E /* AppDelegate.h */,
 				766B32A11D80045A00245F2E /* AppDelegate.m */,
-				766B32A31D80045A00245F2E /* ViewController.h */,
-				766B32A41D80045A00245F2E /* ViewController.m */,
+				766B32A31D80045A00245F2E /* FirstViewController.h */,
+				766B32A41D80045A00245F2E /* FirstViewController.m */,
 				766B32B71D8005E200245F2E /* SecondViewController.h */,
 				766B32B81D8005E200245F2E /* SecondViewController.m */,
-				766B32B41D8004AC00245F2E /* CollapseAnimator.h */,
-				766B32B51D8004AC00245F2E /* CollapseAnimator.m */,
+				766B32B41D8004AC00245F2E /* SACCollapseAnimator.h */,
+				766B32B51D8004AC00245F2E /* SACCollapseAnimator.m */,
 				766B32A61D80045A00245F2E /* Main.storyboard */,
 				766B32A91D80045A00245F2E /* Assets.xcassets */,
 				766B32AB1D80045A00245F2E /* LaunchScreen.storyboard */,
@@ -160,10 +160,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				766B32B91D8005E200245F2E /* SecondViewController.m in Sources */,
-				766B32A51D80045A00245F2E /* ViewController.m in Sources */,
+				766B32A51D80045A00245F2E /* FirstViewController.m in Sources */,
 				766B32A21D80045A00245F2E /* AppDelegate.m in Sources */,
 				766B329F1D80045A00245F2E /* main.m in Sources */,
-				766B32B61D8004AC00245F2E /* CollapseAnimator.m in Sources */,
+				766B32B61D8004AC00245F2E /* SACCollapseAnimator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +316,7 @@
 				766B32B31D80045A00245F2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

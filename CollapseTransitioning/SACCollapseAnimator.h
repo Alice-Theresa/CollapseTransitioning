@@ -1,5 +1,5 @@
 //
-//  CollapseAnimator.h
+//  SACCollapseAnimator.h
 //  CollapseTransitioning
 //
 //  Created by S.C. on 16/9/7.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface CollapseAnimator : NSObject <UIViewControllerAnimatedTransitioning>
+@interface SACCollapseAnimator : NSObject <UIViewControllerAnimatedTransitioning>
 
 /**
  *  转场持续时间

@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  FirstViewController.h
 //  CollapseTransitioning
 //
 //  Created by S.C. on 16/9/7.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController <UIViewControllerTransitioningDelegate>
+@interface FirstViewController : UIViewController <UIViewControllerTransitioningDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *go;
 

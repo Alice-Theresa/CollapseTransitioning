@@ -1,14 +1,14 @@
 //
-//  CollapseAnimator.m
+//  SACCollapseAnimator.m
 //  CollapseTransitioning
 //
 //  Created by S.C. on 16/9/7.
 //  Copyright © 2016年 Kabylake. All rights reserved.
 //
 
-#import "CollapseAnimator.h"
+#import "SACCollapseAnimator.h"
 
-@implementation CollapseAnimator
+@implementation SACCollapseAnimator
 
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext {
     
@@ -53,10 +53,7 @@
             [snapshots addObject:snapshot];
         }
     }
-    
-    //打印切割后的总数
-    //NSLog(@"%ld", snapshots.count);
-    
+
     //布置View
     [containerView addSubview:toView];
     [containerView sendSubviewToBack:toView];

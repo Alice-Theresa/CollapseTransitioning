@@ -1,20 +1,20 @@
 //
-//  ViewController.m
+//  FirstViewController.m
 //  CollapseTransitioning
 //
 //  Created by S.C. on 16/9/7.
 //  Copyright © 2016年 Kabylake. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "FirstViewController.h"
 #import "SecondViewController.h"
-#import "CollapseAnimator.h"
+#import "SACCollapseAnimator.h"
 
-@interface ViewController ()
+@interface FirstViewController ()
 
 @end
 
-@implementation ViewController
+@implementation FirstViewController
 
 - (void)viewDidLoad {
     
@@ -31,7 +31,7 @@
 
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
     
-    CollapseAnimator *animator = [[CollapseAnimator alloc] init];
+    SACCollapseAnimator *animator = [[SACCollapseAnimator alloc] init];
     //animator.duration = 1;
     //animator.sideLength = 8;
     return animator;
