@@ -12,18 +12,16 @@
 
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext {
     
-    //默认转场时间为2s
-    _duration = _duration ? : 2;
-    return _duration;
+    self.duration = self.duration ? : 2;
+    return self.duration;
 }
 
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
     
-    //默认边长为10
-    _sideLength = _sideLength ? : 10;
+    self.sideLength = self.sideLength ? : 10;
     
     //获取View
-    UIView *containerView = [transitionContext containerView];
+    UIView *containerView = transitionContext.containerView;
     UIView *fromView      = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey].view;
     UIView *toView        = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey].view;
     
@@ -34,10 +32,10 @@
     NSMutableArray *xSampleArray = [[NSMutableArray alloc] init];
     NSMutableArray *ySampleArray = [[NSMutableArray alloc] init];
     
-    for (NSInteger i = 0; i < fromView.bounds.size.width; i = i + _sideLength) {
+    for (NSInteger i = 0; i < fromView.bounds.size.width; i = i + self.sideLength) {
         [xSampleArray addObject:@(i)];
     }
-    for (NSInteger i = 0; i < fromView.bounds.size.height; i = i + _sideLength) {
+    for (NSInteger i = 0; i < fromView.bounds.size.height; i = i + self.sideLength) {
         [ySampleArray addObject:@(i)];
     }
     
@@ -46,7 +44,7 @@
     
     for (NSNumber *x in xSampleArray) {
         for (NSNumber *y in ySampleArray) {
-            CGRect snapshotRegion = CGRectMake([x doubleValue], [y doubleValue], _sideLength, _sideLength);
+            CGRect snapshotRegion = CGRectMake(x.doubleValue, y.doubleValue, self.sideLength, self.sideLength);
             UIView *snapshot      = [fromViewSnapshot resizableSnapshotViewFromRect:snapshotRegion afterScreenUpdates:NO withCapInsets:UIEdgeInsetsZero];
             snapshot.frame        = snapshotRegion;
             [containerView addSubview:snapshot];
@@ -60,7 +58,7 @@
     [containerView sendSubviewToBack:fromView];
     
     //Collapse动画
-    [UIView animateWithDuration:_duration
+    [UIView animateWithDuration:self.duration
                           delay:0
                         options:UIViewAnimationOptionCurveLinear
                      animations:^{
@@ -72,7 +70,7 @@
                          for (UIView *view in snapshots) {
                              [view removeFromSuperview];
                          }
-                         [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
+                         [transitionContext completeTransition:!transitionContext.transitionWasCancelled];
                      }];
 }
 

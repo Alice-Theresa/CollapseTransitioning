@@ -12,12 +12,12 @@
 @interface SACCollapseAnimator : NSObject <UIViewControllerAnimatedTransitioning>
 
 /**
- *  转场持续时间
+ *  转场持续时间,默认为2s
  */
 @property (nonatomic, readwrite, assign) NSTimeInterval duration;
 
 /**
- *  碎片大小
+ *  碎片大小,默认边长为10
  */
 @property (nonatomic, readwrite, assign) NSInteger sideLength;
 
