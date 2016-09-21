@@ -10,7 +10,4 @@
 
 @interface FirstViewController : UIViewController <UIViewControllerTransitioningDelegate>
 
-@property (weak, nonatomic) IBOutlet UIButton *go;
-
 @end
-
